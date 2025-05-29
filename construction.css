@@ -1,0 +1,391 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p{
+    font-size: 20px;
+}
+
+#centeredText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#header {
+    background-color: black;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    width: 100%;
+}
+
+#headerImg{
+    width: 500px;
+    height: 100px; 
+}
+
+#taskbar {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#taskbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#taskbar a:hover {
+  color: #56c3ed;
+}
+
+#constructionIntroSection{
+    background-image: url(construction/whiteBackground2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px black solid;
+}
+#introDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 10% 2%;
+}
+
+#introDetails img{
+    height: 25%;
+    width: 25%;
+    border-radius: 10%;
+}
+
+#introText{
+    margin: 10%;
+}
+
+#howItWorksSection{
+    background-image: url("construction/darkbackground.jpg");
+    padding: 100px 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#howItWorksSection h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+#howItWorksSection p{
+    color: white;
+    text-align: center;
+    width: 50%;
+}
+
+#howItWorksImages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#howItWorksImages img{
+    height: 75%;
+    width: 75%;
+}
+
+#edgeClamp, #fireStop, #coneSleeve{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#edgeClamp p, #fireStop p, #coneSleeve p{
+    font-size: 30px;
+    font-style: italic;
+    width: fit-content;
+}
+
+
+#coneSleeve{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#problemsSection{
+    padding-top: 30px;  
+    padding-bottom: 30px;  
+    background-image: url(construction/background3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#problemsSection h2{
+    text-align: center;
+}
+
+#problemsSection p{
+    text-align: center;
+    width: 60%;
+}
+
+#problemsImages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#problemsImages img{
+    height: 50%;
+    width: 50%;
+    border-radius: 10%;
+}
+
+#oldSystemSection{
+    background-image: url('construction/backgroundvertical.png');
+}
+
+#oldSystemSection p{
+    color: white;
+    text-align: center;
+    margin: 10%;
+}
+
+#oldSystemSection h2{
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+    font-size: 250%;
+}
+
+#oldPiping, #whyItsInefficient{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#oldPiping img{
+    width: 30%;
+    margin: 10%;
+}
+
+#whyItsInefficient img{
+    width: 30%;
+    margin: 10%;
+}
+
+#featuresSection h2{
+    text-align: center;
+    font-size: 250%;
+}
+
+#featuresSection{
+    background-image: url('construction/background2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: black solid 2px;
+    padding: 90px 0px;
+}
+
+#features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 100px;
+}
+
+#features p{
+    margin: 25px;
+}
+
+#componentsSection{
+    background-image: url(construction/backgroundvertical.png);
+    border: black 1px solid;
+}
+
+#componentsSection h2{
+    text-align: center;
+}
+
+#componentsSection i{
+    color: #0066ff;
+}
+
+#singleClampInfo, #doubleClampInfo, #fireStopInfo, #coneSleeveInfo{
+    display: flex;
+    align-items: center;
+}
+
+#singleClampInfo img, #doubleClampInfo img, #fireStopInfo img{
+    width: 25%;
+    height: 25%;
+    margin: 50px 100px;
+}
+
+#coneSleeveInfo img{
+    height: 25%;
+    width: 25%;
+    margin: 45px 100px;
+    
+}
+
+#singleClampInfo p, h3, #doubleClampInfo p, h3, #fireStopInfo p, h3, #coneSleeveInfo p, h3{
+    text-align: center;
+    margin-left: 10%;
+    font-size: 150%;
+    color: white;
+}
+
+#compareSection{
+    text-align: center;
+    padding: 5% 15%;
+    background-image: url(construction/background2.jpg);
+}
+
+#compareTable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #000;
+}
+
+th, td {
+    padding: 16px;
+    border: 2px solid #1f3f87;
+}
+
+th {
+    background-color: #0066d9;
+    color: white;
+    font-size: 1.1em;
+}
+
+td {
+    background-color: #000;
+    font-size: 1em;
+    color: white;
+}
+
+.check {
+    color: white;
+    font-size: 1.5em;
+}
+
+.cross {
+    color: white;
+    font-size: 1.5em;
+}
+
+#contactSection{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    background-image: url(construction/background.png);
+}
+
+#contactSection h1{
+    font-size: 300%;
+    font-style: italic;
+}
+
+#contactSection p{
+    font-size: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+#contactInfo{
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+}
+
+#formDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#generalQuestionForm {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+
+
+#footer{
+    padding: 30px;
+    background-color: black;
+}
+
+#footer p{
+    color: white;
+    text-align: center;
+    height: 30px;
+    font-style: italic;
+    font-size: 15px;
+}
