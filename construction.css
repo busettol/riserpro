@@ -74,7 +74,7 @@ p{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px black solid;
+    padding: 5px 0px;
 }
 #introDetails{
     display: flex;
@@ -87,6 +87,7 @@ p{
     height: 25%;
     width: 25%;
     border-radius: 10%;
+    margin-left: 10%;
 }
 
 #introText{
@@ -168,9 +169,10 @@ p{
 }
 
 #problemsImages img{
-    height: 50%;
     width: 50%;
     border-radius: 10%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
 }
 
 #oldSystemSection{
@@ -212,7 +214,6 @@ p{
     background-image: url('construction/background2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    border: black solid 2px;
     padding: 90px 0px;
 }
 
@@ -227,9 +228,31 @@ p{
     margin: 25px;
 }
 
+#featuresImages{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#featuresImg1, #featuresImg2, #featuresImg3, #featuresImg4, #featuresImg5{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#featuresImg1 img, #featuresImg2 img, #featuresImg3 img, #featuresImg4 img, #featuresImg5 img{
+    width: 60px;
+}
+
+#featuresImg1 p, #featuresImg2 p, #featuresImg3 p, #featuresImg4 p, #featuresImg5 p{
+    text-align: left;
+}
+
 #componentsSection{
     background-image: url(construction/backgroundvertical.png);
-    border: black 1px solid;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 10px;
 }
 
 #componentsSection h2{
@@ -404,4 +427,21 @@ input[type="submit"]:hover {
     height: 30px;
     font-style: italic;
     font-size: 15px;
+}
+
+@media (max-width: 780px) {
+    #introDetails{
+        flex-direction: column;
+    }
+
+    #problemsImages{
+        flex-direction:column;
+    }
+    #problemsImages img{
+        height: 20%;    
+    }
+
+    #introDetails img{
+        width: 50%;
+    }
 }
