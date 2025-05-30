@@ -177,6 +177,12 @@ p{
     background-image: url('construction/backgroundvertical.png');
 }
 
+#oldSystemSection img{
+    width: 30%;
+    margin: 10%;
+    border-radius: 10px;
+}
+
 #oldSystemSection p{
     color: white;
     text-align: center;
@@ -196,16 +202,6 @@ p{
     align-items: center;
 }
 
-
-#oldPiping img{
-    width: 30%;
-    margin: 10%;
-}
-
-#whyItsInefficient img{
-    width: 30%;
-    margin: 10%;
-}
 
 #featuresSection h2{
     text-align: center;
@@ -340,40 +336,60 @@ td {
     color: white;
 }
 
-#formDiv{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#formDiv {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px 60px 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-#generalQuestionForm {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Form elements */
+#questionForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-form.form-example {
-  display: table;
+.form-example label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
 }
 
-div.form-example {
-  display: table-row;
+.form-example input[type="text"],
+.form-example input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 14px;
 }
 
-label,
-input {
-  display: table-cell;
-  margin-bottom: 10px;
+.form-example input[type="text"]:focus,
+.form-example input[type="email"]:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+  outline: none;
 }
 
-label {
-  padding-right: 10px;
+input[type="submit"] {
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #357ab8;
 }
 
 
