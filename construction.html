@@ -7,6 +7,7 @@
         <title>Sherwood Innovations Inc.</title>
         <link rel="stylesheet" href="construction.css">
         <link rel="icon" href="navIcon.jpeg" type="image/jpeg">
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
         <script src="script.js" defer></script>
     </head>
 
@@ -228,7 +229,7 @@
             <b><p>For any immediate questions fell free to fill out the form.</p></b>
         </div>
         
-        <div id="formDiv" class="fade-in-section">
+        <div id="formDiv">
             <div id="generalQuestionForm">
                 <form id="questionForm">
                     <div class="form-example">
@@ -244,8 +245,18 @@
                         <input type="text" name="user_phone" id="phone" />
                     </div>
                     <div class="form-example">
+                        <label>What are you inquiring about?</label><br />
+                        <div class="radio-group">
+                            <input type="radio" id="riserPro" name="inquiry_type" value="RiserPro" required />
+                            <label for="riserPro">RiserPro</label><br />
+
+                            <input type="radio" id="generalInquiry" name="inquiry_type" value="General Inquiry" />
+                            <label for="generalInquiry">General Inquiry</label><br />
+                        </div> 
+                    </div>
+                    <div class="form-example">
                         <label for="message">Message: </label>
-                        <input type="text" name="user_message" id="message"/>
+                        <textarea name="user_message" id="message" rows="6"></textarea>
                     </div>
                     <div class="form-example">
                         <input type="submit" value="Submit" />

@@ -13,3 +13,29 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in-section').forEach(section => {
   observer.observe(section);
 });
+
+//initialize emailjs
+(function () {
+  emailjs.init("ngolkZkTVk-ZPL5Av");
+})();
+
+// contact us form
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("questionForm");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    emailjs.sendForm("service_pp5q2fl", "template_exbr5rh", form)
+      .then(function () {
+        // showAlert("Email sent successfully!");
+        alert("Email sent successfully.")
+        form.reset();
+
+      }, function (error) {
+        console.error("Failed to send email:", error);
+        // showAlert("Failed to send email. Please try again.");
+        alert("Failed to send email. Please try again.")
+      });
+  });
+});
