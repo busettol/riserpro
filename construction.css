@@ -453,15 +453,16 @@ td {
 
 
 #footer{
-    padding: 30px;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #footer p{
     color: white;
-    text-align: center;
+    text-align: left;
     height: 30px;
-    font-style: italic;
     font-size: 15px;
 }
 
