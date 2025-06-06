@@ -100,6 +100,7 @@ p{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 #howItWorksSection h1{
@@ -114,17 +115,28 @@ p{
     width: 50%;
 }
 
-#howItWorksImages{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
+#howItWorksImages {
+  display: flex;
+  justify-content: center; /* even space between image blocks */
+  gap: 100px;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  padding: 20px;
+  align-items: center;
 }
 
-#howItWorksImages img{
-    height: 75%;
-    width: 75%;
+#howItWorksImages > div {
+  width: 300px; /* adjust as needed */
+  text-align: center;
 }
+
+#howItWorksImages img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain; /* or 'contain' if you want no cropping */
+  border-radius: 8px;
+  /* border: white solid 2px; */
+}
+
 
 #edgeClamp, #fireStop, #coneSleeve{
     display: flex;
@@ -135,13 +147,10 @@ p{
 #edgeClamp p, #fireStop p, #coneSleeve p{
     font-size: 30px;
     font-style: italic;
-    width: fit-content;
-}
-
-
-#coneSleeve{
-    padding-left: 5%;
-    padding-right: 5%;
+    width: auto;
+    font-weight: 500; /* makes it a bit bolder without being too thick */
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 #problemsSection{
@@ -155,25 +164,35 @@ p{
 
 #problemsSection h2{
     text-align: center;
+    padding-bottom: 30px;
 }
 
 #problemsSection p{
     text-align: center;
-    width: 60%;
+    width: 100%;
 }
 
-#problemsImages{
+#problemsImages {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
-#problemsImages img{
-    width: 50%;
+#problemsImages div {
+    text-align: center;
+    max-width: 300px;
+}
+
+#problemsImages img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
     border-radius: 10%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-
 }
+
 
 #oldSystemSection{
     background-image: url('construction/backgroundvertical.png');
@@ -451,14 +470,29 @@ td {
         flex-direction: column;
     }
 
+    #edgeClamp p, #fireStop p, #coneSleeve p{
+        width: 500px;
+    }
+
     #problemsImages{
         flex-direction:column;
+        justify-content: center;
+        align-items: center;
     }
     #problemsImages img{
         height: 20%;    
     }
 
+
     #introDetails img{
         width: 50%;
+    }
+
+    #howItWorksImages{
+        gap: 10px;
+    }
+
+    #compareSection{
+        padding: 5% 0%;
     }
 }
