@@ -358,6 +358,8 @@ td {
     padding-bottom: 30px;
     padding-top: 20px;
     background-image: url(construction/background.png);
+    background-size: cover;
+    height: 1200px;
 }
 
 #contactSection h1{
@@ -457,6 +459,7 @@ td {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 2% 5%;
 }
 
 #footer p{
@@ -464,6 +467,7 @@ td {
     text-align: left;
     height: 30px;
     font-size: 15px;
+    margin: 25px;
 }
 
 @media (max-width: 780px) {
